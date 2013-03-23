@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/lt"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" >
+
+        <ImageButton
+            android:id="@+id/play_button"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:src="@drawable/play_button_normal"
+            android:text="PLAY" />
+
+        <ImageButton
+            android:id="@+id/stop_button"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:src="@drawable/stop_button_normal"
+            android:text="STOP" />
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:src="@drawable/record_button_normal"
+            android:text="RECORD" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Export" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/column"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/lt"
+        android:orientation="vertical" >
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Pattern 1" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Pattern 2" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Pattern 3" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Pattern 4" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Voice" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/horizontal_scroll_part"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/column"
+        android:layout_toRightOf="@+id/column" >
+
+        <HorizontalScrollView
+            android:id="@+id/horizontalScrollView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/horizontal_scroll_part"
+            android:layout_below="@+id/lt" >
+
+            <RelativeLayout
+                android:id="@+id/linear_layout_inside_hori_scroll"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:orientation="vertical" >
+
+                <Button
+                    android:id="@+id/preview1"
+                    android:layout_width="1800dp"
+                    android:layout_height="25dp"
+                    android:layout_alignTop="@+id/linear_layout_inside_hori_scroll"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginBottom="60dp"  />
+                
+                <Button
+                    android:id="@+id/preview2"
+                    android:layout_width="1800dp"
+                    android:layout_height="25dp"
+                    android:layout_below="@id/preview1"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginBottom="60dp"    />
+                
+                <Button
+                    android:id="@+id/preview3"
+                    android:layout_width="1800dp"
+                    android:layout_height="25dp"
+                    android:layout_below="@id/preview2"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginBottom="60dp"    />
+                
+                <Button
+                    android:id="@+id/preview4"
+                    android:layout_width="1800dp"
+                    android:layout_height="25dp"
+                    android:layout_below="@id/preview3"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginBottom="60dp"    />
+                
+                <Button
+                    android:id="@+id/voice"
+                    android:layout_width="1800dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/preview4"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginBottom="60dp"   />
+                
+            </RelativeLayout>
+        </HorizontalScrollView>
+    </RelativeLayout>
+
+</RelativeLayout>
